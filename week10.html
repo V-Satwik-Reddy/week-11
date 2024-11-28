@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Div with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Define styles for the dynamically created div */
+        .dynamic-div {
+            width: 300px;
+            height: 150px;
+            background-color: lightcoral;
+            border: 3px solid darkred;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 150px;
+            margin: 20px auto;
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <button id="createDiv">Create Div</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#createDiv").click(function () {
+                // Create a div element
+                let newDiv = $("<div></div>").addClass("dynamic-div").text("This is a stylish dynamic div!");
+
+                // Append the div to the body
+                $("body").append(newDiv);
+            });
+        });
+    </script>
+</body>
+</html>
+
